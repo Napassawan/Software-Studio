@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Test Basic Bootstrap</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: black;
+                font-family: 'Mitr', sans-serif;
+            }
+            a.nav-item.nav-link
+            {
+                border: none;
+                padding: 18px 25px;
+                color:rgb(255, 255, 255);
+                background:#000000;
+                border-radius:0;
+            }
+            .collapsing-content{
+                color: white;
+            }
+            .tab-content{
+                color: white;
+            }
+            h1{
+                text-align: center;
+                font-weight: bold;
+                padding:30px ;
+                border-bottom:1px solid #960505;
+                border-radius: 50px;
+            }
+            .center-main {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+            }
+            .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            }
+            p{
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contianer">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <nav class="navbar navbar-expand-md" style="background-color: #000000;">
+                        <a href="#Rec" class="navbar-brand">
+                            <img src="https://images.workpointnews.com/workpointnews/2020/03/12191743/1584015457_23633_.jpg" height="50">
+                        </a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link" href = "#Rec" data-toggle="collapse">Top 5 Recommend Moive</a>
+                                <a class="nav-item nav-link" href = "#first" data-toggle="collapse">Don't Look Up</a>
+                                <a class="nav-item nav-link" href = "#second" data-toggle="collapse">The Wasteland</a>
+                                <a class="nav-item nav-link" href = "#third" data-toggle="collapse">Single's Infero</a>
+                                <a class="nav-item nav-link" href = "#forth" data-toggle="collapse">The Silent Sea</a>
+                                <a class="nav-item nav-link" href = "#fifth" data-toggle="collapse">The Unforgivable</a>
+                                <a class="nav-item nav-link" href = "#about" data-toggle="collapse">About Us</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="collapsing-content">
+                        <div class="collapsing" id="Rec">
+                            <h1>Top 5 </h1><br>
+                            <p>
+                                <h3>
+                                    <ol>
+                                        <li>Don't Look Up</li>
+                                        <li>The Wasteland</li>
+                                        <li>Single's Infero</li>
+                                        <li>The Silent Sea</li>
+                                        <li>The Unforgivable</li>
+                                    </ol>
+                                </h3>
+                            </p>
+                        </div>
+                        <div class="collapsing" id="first">
+                            <h1>Don't Look Up</h1><br>
+                            <img src="https://static.thairath.co.th/media/Dtbezn3nNUxytg04aYibFeyMqJOQwuSTYYsHyr8jDQvbGR.webp" class="center">
+                            <br><h3><p>เรื่องย่อ : ผลงานออริจินัลของ Netflix เล่าเรื่องราวแนวตลกร้ายเสียดสีสังคม ยกทัพนักแสดงฮอลลีวูดดีกรีออสการ์มาร่วมประชันฝีมือ เช่น Leonardo DiCaprio, Jennifer Lawrence, Meryl Streep ฯลฯ เมื่อสองนักดาราศาสตร์ค้นพบดาวหางมฤตยูที่กำลังจะพุ่งชนโลก จึงติดต่อรัฐบาลและออกเดินสายประชาสัมพันธ์ผ่านสื่อต่างๆ หวังเตือนมนุษยชาติให้รับมือกับภัยพิบัติในอนาคต แต่กลับไม่มีคนสนใจ อีกทั้งยังถูกนำมาใช้เป็นเครื่องมือทางการเมือง </p></h3>
+                        </div>
+                        <div class="collapsing" id="second">
+                            <h1>The Wasteland แผ่นดินร้าง</h1><br>
+                            <img src="https://static.thairath.co.th/media/Dtbezn3nNUxytg04aYibFeyMqJOQwuST0Vmmru9vv0Wr8c.webp" class="center">
+                            <br><h3><p>เรื่องย่อ : ภาพยนตร์สัญชาติสเปนแนวสยองขวัญ เล่าเรื่องราวของครอบครัวหนึ่ง ที่ต้องอยู่อย่างโดดเดี่ยวในแดนรกร้างห่างไกล แต่กลับต้องเผชิญหน้ากับอสุรกายร้าย ที่มักจะแข็งแกร่งขึ้นได้เพราะความกลัวของมนุษย์ ภารกิจในครั้งนี้พวกเขาจะต้องทำทุกวิถีทางเพื่อปกป้องชีวิตและครอบครัวอย่างถึงที่สุด </p></h3>
+                        </div>
+                        <div class="collapsing" id="third">
+                            <h1>Single's Infero โอน้อยออก ใครโสดตกนรก</h1><br>
+                            <img src="https://static.thairath.co.th/media/Dtbezn3nNUxytg04aYibFeyMqJOQwuSTQHZeAYGZT4tfLN.webp" class="center">
+                            <br><h3><p>เรื่องย่อ : รายการเรียลลิตี้หาคู่จากประเทศเกาหลีใต้ที่กำลังถูกพูดถึงอยู่ในขณะนี้ เมื่อหนุ่มสาวโสดหน้าตาดีที่พร้อมจะหว่านเสน่ห์ให้ฝ่ายตรงข้ามตกหลุมรัก ต้องมาติดเกาะร้างในดินแดนห่างไกล ผู้ที่จะออกไปจากเกาะแห่งนี้ได้จะต้องมีคู่ควงที่ถูกใจกันทั้งสองฝ่ายเท่านั้น</p></h3>
+                        </div>
+                        <div class="collapsing" id="forth">
+                            <h1>The Silent Sea ทะเลสงัด </h1><br>
+                            <img src="https://static.thairath.co.th/media/Dtbezn3nNUxytg04aYibFeyMqJOQwuSTmchjdJVBe6xmYH.webp" class="center">
+                            <br><h3><p>เรื่องย่อ : ซีรีส์เกาหลีแนว Sci-Fi นำแสดงโดย กงยู, แบดูนา, อีจุน เล่าเรื่องราวของทีมสำรวจอวกาศที่ต้องปฏิบัติภารกิจเป็นเวลา 24 ชั่วโมง ในการเก็บกู้ตัวอย่างทดลองจากศูนย์วิจัยร้างบนดวงจันทร์ ทำให้พวกเขาได้ค้นพบความลับมากมายที่ถูกปกปิดจากทางการ</p></h3>
+                        </div>
+                        <div class="collapsing" id="fifth">
+                            <h1>The Unforgivable ตราบาป</h1><br>
+                            <img src="https://static.thairath.co.th/media/Dtbezn3nNUxytg04aYibFeyMqJOQwuST6kR9v0t6W59Ox1.webp" class="center">
+                            <br><h3><p>เรื่องย่อ : ผลงานการแสดงสุดดราม่าของนักแสดงหญิง Sandra Bullock ที่มารับบทเป็นอดีตนักโทษหญิง ผู้ได้โอกาสในการกลับคืนสู่สังคม แต่ชีวิตใหม่ของเธอไม่ได้ราบรื่นอย่างที่คิด ทำให้เธอตัดสินใจออกตามหาน้องสาวที่เคยจำใจทิ้งไว้เบื้องหลัง เรื่องราวดราม่าชีวิตและการต่อสู้เพื่อพิสูจน์ตัวเองของเธอจึงเริ่มต้นขึ้น</p></h3>
+                        </div>
+                        <div class="collapsing" id="about">
+                            <br><h1>By Napasswan Larmontean<br>
+                            Nickname Lion<br>
+                            ID 63010495<br></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
