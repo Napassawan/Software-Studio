@@ -1,0 +1,241 @@
+// // create element
+// maincon = document.getElementById("mainconcontainer");
+// var h1 = document.createElement("h1");
+// var h2 = document.createElement("h2");
+// var button = document.createElement("button");
+// var person = document.createElement("a");
+// var perinfo = document.createElement("a");
+// var divtime = document.createElement("div");
+// var divperson = document.createElement("div");
+// document.body.onload = addElement;
+// var worker;
+// var count = 0;
+// button.setAttribute("id", "time");
+
+// // function add Element
+// function addElement() {
+//   h2.innerHTML = "Exercise 04: JavaScript&DOM";
+//   maincon.appendChild(h2);
+//   maincon.appendChild(document.createElement("br"));
+//   button.innerText = "Click me to display Date and time";
+//   divtime.appendChild(button);
+//   maincon.appendChild(divtime);
+//   maincon.appendChild(document.createElement("br"));
+//   button.setAttribute("id", "inputBTN");
+//   button.onclick = function () {
+//     startWorker();
+//     return false;
+//   };
+
+//   person.innerHTML = "Personal Info";
+//   person.style.textDecoration = "underline";
+//   person.style.width = "fit-content";
+//   person.href = "#";
+//   person.style.color = "hotpink";
+//   maincon.appendChild(person);
+//   person.onmouseover = function () {
+//     person.style.color = "white";
+//     person.style.backgroundColor = "black";
+//   };
+//   person.onmouseout = function () {
+//     person.style.color = "hotpink";
+//     person.style.backgroundColor = "white";
+//   };
+//   person.onclick = function () {
+//     openPersonal();
+//     return false;
+//   };
+
+//   perinfo.setAttribute("id", "perinfo");
+//   perinfo.style.display = "none";
+
+  
+
+//   var nameID = document.createTextNode("Napassawan Larmontean, ID : 63010495");
+//   var subject = document.createTextNode("subject : SOFTWARE STUDIO");
+//   var semester = document.createTextNode("semester : 2");
+//   var ul = document.createElement("ul");
+//   var li1 = document.createElement("li");
+//   var li2 = document.createElement("li");
+//   var li3 = document.createElement("li");
+//   li1.appendChild(nameID);
+//   li2.appendChild(subject);
+//   li3.appendChild(semester);
+//   ul.appendChild(li1);
+//   ul.appendChild(li2);
+//   ul.appendChild(li3);
+
+//   perinfo.appendChild(ul);
+
+//   function openPersonal() {
+//     var openP = document.getElementById("perinfo");
+//     if (openP.style.display == "none") {
+//       openP.style.display = "block";
+//     } else {
+//       openP.style.display = "none";
+//     }
+//   }
+//   divperson.appendChild(perinfo);
+//   maincon.appendChild(divperson);
+
+//   h1.innerHTML = "Snapshots";
+//   maincon.appendChild(h1);
+
+  
+//   var piclist = document.createElement("ul");
+//   var shoto = document.createElement("li");
+//   var link1 = document.createElement("a");
+//   link1.href = "#";
+//   link1.textContent = "Shoto Todoroki";
+//   shoto.appendChild(link1);
+//   piclist.appendChild(shoto);
+//   maincon.append(piclist);
+
+//   link1.onclick = function () {
+//     var existingImg = maincon.getElementsByTagName("img")[0];
+//     if (existingImg) {
+//       maincon.removeChild(existingImg);
+//     }
+//     var img = document.createElement("img");
+//     img.src = "https://64.media.tumblr.com/4d0a31a1b068c298acc00d35fc180781/a17bfde03a064818-4f/s1280x1920/949e85bd0f9167f3199a3a0b5a4880b6fcfa03fb.jpg";
+//     img.width = "400";
+//     img.height = "400";
+//     img.alt = "";
+//     maincon.appendChild(img);
+//   };
+//   maincon.appendChild(shoto);
+
+//   var momo = document.createElement("li");
+//   var link2 = document.createElement("a");
+//   link2.href = "#";
+//   link2.textContent = "Momo Yaoyorozu";
+//   momo.appendChild(link2);
+//   piclist.appendChild(momo);
+
+//   link2.onclick = function () {
+//     var existingImg = maincon.getElementsByTagName("img")[0];
+//     if (existingImg) {
+//       maincon.removeChild(existingImg);
+//     }
+//     var img = document.createElement("img");
+//     img.src = "https://64.media.tumblr.com/a6c1345676a1b67c711335f6dd82c53f/66ac58e1b3de4e07-e0/s640x960/d395f6715d9692a6581844450160804c3a053035.jpg";
+//     img.width = "400";
+//     img.height = "400";
+//     img.alt = "Crest";
+//     maincon.appendChild(img);
+//   };
+//   maincon.appendChild(momo);
+
+//   var izu = document.createElement("li");
+//   var link3 = document.createElement("a");
+//   link3.href = "#";
+//   link3.textContent = "Midoriya Izuku";
+//   izu.appendChild(link3);
+//   piclist.appendChild(izu);
+
+//   link3.onclick = function () {
+//     var existingImg = maincon.getElementsByTagName("img")[0];
+//     if (existingImg) {
+//       maincon.removeChild(existingImg);
+//     }
+//     var img = document.createElement("img");
+//     img.src = "https://64.media.tumblr.com/7c6fcee408a63ba5357bf6b9ea337535/2f4e86a645d3bf7d-1f/s1280x1920/ecb595ee45e410a1cd343cdaf8cdae4d8cdd987d.jpg";
+//     img.width = "400";
+//     img.height = "400";
+//     maincon.appendChild(img);
+//   };
+//   maincon.appendChild(izu);
+
+//   var kat = document.createElement("li");
+//   var link4 = document.createElement("a");
+//   link4.href = "#";
+//   link4.textContent = "Bakugou Katsuki";
+//   kat.appendChild(link4);
+//   piclist.appendChild(kat);
+
+//   link4.onclick = function () {
+//     var existingImg = maincon.getElementsByTagName("img")[0];
+//     if (existingImg) {
+//       maincon.removeChild(existingImg);
+//     }
+//     var img = document.createElement("img");
+//     img.src = "https://64.media.tumblr.com/e7736ba0cba1996289b4abfa1cb90bcb/a9effb67478657dd-89/s1280x1920/d87d80d9c72f6622c729bd296ebe7bb4c156a85a.jpg";
+//     img.width = "400";
+//     img.height = "400";
+//     maincon.appendChild(img);
+//   };
+//   maincon.appendChild(kat);
+//   maincon.appendChild(document.createElement("br"));
+
+//   var img = document.createElement("img");
+//   img.src = "https://logos-world.net/wp-content/uploads/2022/09/MHA-Symbol.png";
+//   img.alt = "artemis";
+//   img.width = "600";
+//   img.height = "300";
+//   maincon.appendChild(img);
+// }
+
+// function startWorker() {
+//   button.style.position = "fixed";
+//   button.style.right = "0";
+//   button.style.top = "0";
+//   button.style.width = "355px";
+//   button.style.textAlign = "center";
+//   button.style.border = "solid black";
+
+//   button.onclick = function () {
+
+//     button.style.position = "static";
+//     stopWorker();
+//     button.onclick = function () {
+//       button.style.display = "block";
+//       startWorker();
+//     };
+//   };
+
+//   if (typeof Worker !== "undefined") {
+//     if (typeof worker == "undefined") {
+//       worker = new Worker("worker.js"); 
+//     }
+//     worker.postMessage("start");
+//    var bgColors = [
+//       "black",
+//       "#454545",
+//       "#3D3D3D",
+//       "#D2D2D2",
+//       "#ACACAC",
+//       "white",
+//     ];
+    
+//     var colors = ["white", "#ACACAC", "#D2D2D2", "#3D3D3D", "#454545", "black"];
+//     var currentColor = 0;
+//     function changeColor() {
+  
+//       --currentColor;
+
+//       if (currentColor < 0) currentColor = colors.length - 1;
+
+//       for (var i = 0; i < 7; i++) {
+//         button.style.color = colors[(currentColor + i) % colors.length];
+//         button.style.backgroundColor =
+//           bgColors[(currentColor + i) % colors.length];
+//       }
+//     }
+//     intervalID = setInterval(changeColor, 1000);
+
+//     worker.addEventListener("message", function (event) {
+//       button.textContent = event.data;
+//     });
+//   } else {
+//     document.getElementById("time").innerHTML =
+//       "Sorry! No Web Worker support.";
+//   }
+// }
+
+// function stopWorker() {
+//   worker.postMessage("stop");
+//   clearInterval(intervalID);
+//   button.style.position = "";
+//   worker.terminate();
+//   worker = undefined;
+// }

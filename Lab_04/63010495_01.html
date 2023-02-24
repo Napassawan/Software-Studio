@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  <div id="maincontainer"></div>
+  <script>
+    index = document.getElementById('maincontainer');
+    var h2 = document.createElement('h2');
+    h2.innerHTML = "Exercise 04 : Javascript&Dom";
+    index.appendChild(h2);
+
+    var buttonTime = document.createElement('button');
+    buttonTime.innerText = 'Click me to display Date and Time';
+    index.appendChild(buttonTime);
+
+
+    index.appendChild(document.createElement('br'));
+    index.appendChild(document.createElement('br'));
+    var myinfo = document.createElement('div');
+    myinfo.innerHTML = 'Personal Info';
+    myinfo.style.color = 'hotpink';
+    myinfo.style.width = 'fit-content'
+    myinfo.style.textDecoration = 'underline';
+    myinfo.style.cursor = 'pointer';
+
+    index.appendChild(myinfo);
+
+    var ulp = document.createElement('ul');
+    var lip1 = document.createElement('li');
+    var lip2 = document.createElement('li');
+    var lip3 = document.createElement('li');
+
+    lip1.innerText = 'Napassawan Larmontean, ID : 63010495';
+    lip2.innerText = 'Subject : Software Studio';
+    lip3.innerText = 'Semester : 2/2565';
+
+    ulp.appendChild(lip1);
+    ulp.appendChild(lip2);
+    ulp.appendChild(lip3);
+
+    ulp.style.display = 'none';
+    index.appendChild(ulp);
+
+    var h1 = document.createElement('h1');
+    h1.innerHTML = 'Snapshots';
+    index.appendChild(h1);
+
+    var ulpic = document.createElement('ul');
+    var lipic1 = document.createElement('li');
+    var lipic2 = document.createElement('li');
+    var lipic3 = document.createElement('li');
+    var lipic4 = document.createElement('li');
+    var link1 = document.createElement('div');
+    var link2 = document.createElement('div');
+    var link3 = document.createElement('div');
+    var link4 = document.createElement('div');
+
+    link1.innerText = 'Shoto Todoroki';
+    link1.color = 'black';
+    link1.style.textDecoration = 'underline';
+    link1.style.cursor = 'pointer';
+
+    link2.innerText = 'Momo Yaoyorozu';
+    link2.color = 'black';
+    link2.style.textDecoration = 'underline';
+    link2.style.cursor = 'pointer';
+
+    link3.innerText = 'Midoriya Izuku';
+    link3.color = 'black';
+    link3.style.textDecoration = 'underline';
+    link3.style.cursor = 'pointer';
+
+    link4.innerText = 'Bakugou Katsuki';
+    link4.color = 'black';
+    link4.style.textDecoration = 'underline';
+    link4.style.cursor = 'pointer';
+
+    lipic1.appendChild(link1);
+    lipic2.appendChild(link2);
+    lipic3.appendChild(link3);
+    lipic4.appendChild(link4);
+    ulpic.appendChild(lipic1);
+    ulpic.appendChild(lipic2);
+    ulpic.appendChild(lipic3);
+    ulpic.appendChild(lipic4);
+
+    index.appendChild(ulpic);
+
+    var logo = document.createElement('img');
+    logo.src = 'https://logos-world.net/wp-content/uploads/2022/09/MHA-Symbol.png'
+    logo.width = "600";
+    logo.height = "300";
+
+    index.appendChild(logo)
+
+    myinfo.addEventListener('mouseenter', function () {
+      myinfo.style.color = 'white';
+      myinfo.style.backgroundColor = 'black';
+    })
+
+    myinfo.addEventListener('mouseleave', function () {
+      myinfo.style.color = 'hotpink';
+      myinfo.style.backgroundColor = 'white';
+    })
+
+    myinfo.addEventListener('click', function () {
+      if (ulp.style.display === 'none') {
+        ulp.style.display = 'block';
+      }
+      else {
+        ulp.style.display = 'none';
+      }
+    })
+
+    link1.addEventListener('click', function () {
+      logo.src = 'https://64.media.tumblr.com/4d0a31a1b068c298acc00d35fc180781/a17bfde03a064818-4f/s1280x1920/949e85bd0f9167f3199a3a0b5a4880b6fcfa03fb.jpg'
+      logo.width = "400";
+      logo.height = "400";
+    })
+
+    link2.addEventListener('click', function () {
+      logo.src = 'https://64.media.tumblr.com/a6c1345676a1b67c711335f6dd82c53f/66ac58e1b3de4e07-e0/s640x960/d395f6715d9692a6581844450160804c3a053035.jpg'
+      logo.width = "400";
+      logo.height = "400";
+    })
+
+    link3.addEventListener('click', function () {
+      logo.src = 'https://64.media.tumblr.com/7c6fcee408a63ba5357bf6b9ea337535/2f4e86a645d3bf7d-1f/s1280x1920/ecb595ee45e410a1cd343cdaf8cdae4d8cdd987d.jpg'
+      logo.width = "400";
+      logo.height = "400";
+    })
+
+    link4.addEventListener('click', function () {
+      logo.src = 'https://64.media.tumblr.com/e7736ba0cba1996289b4abfa1cb90bcb/a9effb67478657dd-89/s1280x1920/d87d80d9c72f6622c729bd296ebe7bb4c156a85a.jpg'
+      logo.height = "400";
+    })
+
+    var work = false
+    var worker = new Worker("worker.js");
+    function startwork() {
+      worker.postMessage("start")
+      worker.onmessage = function (e) {
+        buttonTime.innerHTML = e.data.date
+        buttonTime.style.backgroundColor = e.data.bgcolor
+        buttonTime.style.color = e.data.color
+        buttonTime.style.position = "fixed"
+        buttonTime.style.top = 0
+        buttonTime.style.right = 0
+        myinfo.style.marginTop = "60.92px"
+      }
+      work = true
+    }
+
+    function stopwork() {
+      worker.postMessage("stop")
+      buttonTime.style.position = null
+      myinfo.style.marginTop = "20px"
+
+      work = false
+    }
+
+    buttonTime.addEventListener("click", function () {
+      if (work) {
+        stopwork();
+      }
+      else {
+        startwork();
+      }
+    })
+
+  </script>
+</body>
+
+</html>
